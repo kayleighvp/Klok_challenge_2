@@ -46,7 +46,7 @@ body {
 .klok p {
 	color: transparent;
 	background-image: linear-gradient(to right, #940000, #602415, #FFFFFF, #FDFFCE ); 
-	background-clip: text;
+	-webkit-background-clip: text;
 	animation: animate 20s linear infinite;
 	background-size: 1000%;
 }
@@ -198,12 +198,4 @@ h1{
 		margin-left:16%;
 		font-size: 21px;
 }
-/* { */
-	/* transition-duration:3s;  */
-	/* transformation-delay: 2s; */
-	/* font-size: 4em; */
-	/* transform: rotateZ(-2deg); */
-	/* color: red; */
-	/* opacity:80;	 */
-/* } */
-
+/* test test */
