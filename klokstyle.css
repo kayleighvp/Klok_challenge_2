@@ -16,6 +16,7 @@ body {
 	"eetbord"
 	"vrijbord";
  }
+ /* grid voor mobile first ingedeeld */
  .menu{
 	 grid-area: menublok;
 	 background:#272F3B;
@@ -33,6 +34,7 @@ body {
 	float:right;
 	padding-right: 10px;
 }
+/* bar met logo en hamsterprofiel */
 .klok{
 	grid-area: klok;
 	margin: 0 auto;
@@ -50,8 +52,7 @@ body {
 	animation: animate 20s linear infinite;
 	background-size: 1000%;
 }
-@keyframes animate
-{ 
+@keyframes animate { 
 	0%
 	{
 		background-position: 0% 100%;
@@ -65,7 +66,7 @@ body {
 		background-position: 0% 100%;
 	}
 }
-	
+/* gradient animatie in de klok om aandacht te trekken  */
 #tijd {
    font-size: 35px;
    font-family: 'Saira Stencil One', cursive;
@@ -81,6 +82,11 @@ body {
    margin-top: 0px;
    
 }
+/* klok en datum opmaak en indeling */
+h1{
+	font-size: 25px;
+	text-align:center;
+}
 .meldingblok{
 	grid-area: meldingbord;
 	width: 350px;
@@ -90,6 +96,7 @@ body {
 	border: 3px solid #9B9CB1;
 	
 }
+/* blok waar ochtend, middag en  de wekker volgens slaapschema wordt getoond */
 .slaapblok{
 	grid-area: slaapbord;
 }
@@ -109,14 +116,11 @@ body {
 	line-height: 35px;
 	border: 3px solid #9B9CB1;
 }
-h1{
-	font-size: 25px;
-	text-align:center;
-}
+
 .slaapblok p, .eetblok p, .vrijblok p{
 	margin-left: 30px;
 }
-
+/* schema blokken opmaak en indeling */
 @media(min-width: 500px){
 	.meldingblok{
 		width: 400px;
@@ -129,6 +133,7 @@ h1{
 		font-size: 18px;
 	}
 }
+/* schema blokken en melding blok worden aangepast voor breder scherm */
 @media(min-width: 700px){
 	body{
 	display:grid;
@@ -159,6 +164,7 @@ h1{
 		margin-left: 50%;
 	}
 }
+/* grid aangepast op breedte voor klein tablet formaat  */
 @media (min-width: 950px){
 	.slaapblok p, .eetblok p, .vrijblok p{
 		font-size: 19px;
@@ -169,6 +175,7 @@ h1{
 		margin-right: 5%;
 	}
 }
+/* kleine aanpassingen aan de tekst in schemablokken. ook de meldingblok wordt groter */
 @media(min-width: 1180px){
 	body{
 		display:grid;
@@ -193,9 +200,10 @@ h1{
 		margin-left:8%;
 	}
 }
+/* grid en grote blokken aangepast op de overgang van tablet formaat naar laptop schermbreedte  */
 @media(min-width: 1580px){
 	.slaapblok p, .eetblok p, .vrijblok p{
 		margin-left:16%;
 		font-size: 21px;
 }
-/* test test */
+/* blokken breedte en tekst indeling aangepast voor groot laptop scherm*/

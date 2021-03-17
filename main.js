@@ -1,4 +1,3 @@
-
 function startTijd() {
   var tijdmoment = new Date();
   var uren = tijdmoment.getHours();
@@ -11,67 +10,43 @@ function startTijd() {
 	}
 	if(uren > 12){
 		// uren = uren + 12;
-		tijdTekst = 'PM'; // dagverschil aanduiding door gebruik van AM en PM
+		tijdTekst = 'PM'; // dagverschil aanduiding door gebruik van AM en PM.
 	}
    minuten = checkTijd(minuten);
    secondes = checkTijd(secondes);
   
-  document.getElementById('tijd').innerHTML =
-  uren + ':' + minuten + ':' + secondes + tijdTekst;
+  document.getElementById('tijd').innerHTML = uren + ':' + minuten + ':' + secondes + tijdTekst; //actuele tijd weergave.
   
   if (uren < 12){
-	  document.getElementById('melding').innerHTML = 'Good morning!';
+	  document.getElementById('melding').innerHTML = 'Good morning!'; // begroeting dat het ochtend is.
   } else {
-	  document.getElementById('melding').innerHTML = 'Good afternoon!';
+	  document.getElementById('melding').innerHTML = 'Good afternoon!'; // begroeting dat het middag is.
   }
   
   if ( uren == 8 && minuten == 30)
-	document.getElementById('melding').innerHTML = ' Time to wake up!';
+	document.getElementById('melding').innerHTML = ' Time to wake up!'; // wekker om 8:30 als het tijd is om wakker te worden.
   
   if ( uren == 22 && minuten == 15)
-	  document.getElementById('melding').innerHTML = ' It is time to sleep!';
+	  document.getElementById('melding').innerHTML = ' It is time to sleep!'; // wekker om 22:15 als het tijd is om te slapen.
 }
 startTijd();
 setInterval(startTijd, 1000);
 
 function checkTijd(i) {
-	if (i < 10) {i = '0' + i};  
+	if (i < 10){
+		i = '0' + i;
 	return i;
-};
-
+	}
+} // een 0 wordt toegevoegd als de secondes of minuten nog onder de tien vallen zodat er 2 nummers worden weergegeven.
 
 function kalenderDatum(){
 	var datumMoment = new Date();
-	var dag = datumMoment.getDate(); 
-	var maand = datumMoment.getMonth()+1; // maanden beginnen bij 0 dus +1 toevoegen
-	var jaar = datumMoment.getFullYear();
+	var dag = datumMoment.getDate(); // geeft de dag aan in een getal.
+	var maand = datumMoment.getMonth()+1; // maanden beginnen bij 0 dus +1 toevoegen voor goede maand.
+	var jaar = datumMoment.getFullYear(); // geeft het jaartal aan waar we ons nu in bevinden.
 	
 	document.getElementById('datum').innerHTML = dag + '/' + maand + '/' + jaar;
 }
 kalenderDatum();
 setInterval(kalenderDatum, 1000);
 
-// stopwatch toevoegen voor wanneer je moeten gaan slapen
-
-//schema met tijden van eten en slapen aangeven
-
-// document.getElementById('clock').innerHTML = today.getDate();
-
-
-// array is meerdere variable samenvoegen.
-// met Object kan je meer, het aanspreken is anders. grote verschil is . niet alleen variable instoppen maar ook een functie instoppen. Ook beginnen met een hoofdletter.
-// met Date is een object met functies waar wij mee moeten werken.
-
-// teller bouwen 
-// var seconds = 0;
-// function count(){
-	// seconds++; // 1 optellen bij seconds
-	// console.log(seconds);
-	
-// stel je wil elke secondes
-// countt();
-
-// setInterval(count, 1000);
-
-	
-// } // handig voor timers of stopwatch
