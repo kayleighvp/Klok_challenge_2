@@ -33,11 +33,9 @@ startTijd();
 setInterval(startTijd, 1000);
 
 function checkTijd(i) {
-	if (i < 10){
-		i = '0' + i;
+	if (i < 10) {i = '0' + i};  
 	return i;
-	}
-} // een 0 wordt toegevoegd als de secondes of minuten nog onder de tien vallen zodat er 2 nummers worden weergegeven.
+}; // een 0 wordt toegevoegd als de secondes of minuten nog onder de tien vallen zodat er 2 nummers worden weergegeven.
 
 function kalenderDatum(){
 	var datumMoment = new Date();
